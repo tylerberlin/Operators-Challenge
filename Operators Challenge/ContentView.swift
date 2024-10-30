@@ -156,6 +156,8 @@ struct ContentView: View {
             /************************************
             * Start Your Code Here For Stretch 1
             ************************************/
+            purchasedPackages = numberOfTickets / 4
+            individualTickets = numberOfTickets % 4
             /*********************************
             * End Your Code Here For Stretch 1
             ***********************************/
@@ -167,9 +169,7 @@ struct ContentView: View {
             /***************************************************
             * Start Your Code Here For Stretch 2 - right swipe
             ****************************************************/
-            
-            purchasedPackages = numberOfTickets()
-            
+            numberOfTickets = numberOfTickets + 1
             /***************************************************
             * End Your Code Here For Stretch 2 - right swipe
             ***************************************************/
@@ -182,8 +182,8 @@ struct ContentView: View {
              /***************************************************
              * Start Your Code Here For Stretch 2 - left swipe
              ****************************************************/
+            numberOfTickets = numberOfTickets - 1
 
-            
              /***************************************************
              * End Your Code Here For Stretch 2 - left swipe
              ***************************************************/
@@ -195,13 +195,13 @@ struct ContentView: View {
         /************************************
         * Start Your Code Here For Stretch 3
         *************************************/
- 
-        
+        let unchartedLink = "https://www.unchartedlearning.org"
+        let completeURL = unchartedLink + urlAddOnTextFieldText
         /***********************************
         * End Your Code Here For Stretch 3
         ***********************************/
         // Uncomment the following line for Stretch #3
-        // openURL(URL(string: completeURL)!)
+        openURL(URL(string: completeURL)!)
     }
 }
 
